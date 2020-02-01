@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="attender.oparkCard">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Permissions for printer module -->
+    <uses-permission android:name="android.location.PROVIDERS_CHANGED" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.ACCESS_MOCK_LOCATION"
+        tools:ignore="MockLocation" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission
+        android:name="android.permission.INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <application
+        android:name="attender.oparkCard.base.AppController"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/bike"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:noHistory="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="attender.oparkCard.splash.Splash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="attender.oparkCard.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.login.Login"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.booking.TwoWheeler"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.booking.FourWheeler"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.shiftreport.ShiftReportctivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.subscription.activity.Subscription"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.vehiclelist.activity.TwoWheelerList"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.vehiclelist.activity.FourWheelerList"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.booking.QRScanPrint"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.vehiclelist.activity.WebViewPrint"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.parkinglist.ParkingList"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.towingoperator.activity.TowingOperator"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.towingoperator.activity.AddTowVehicle"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.towingoperator.activity.ReleasedTowVehicle"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <service
+            android:name="attender.oparkCard.towingoperator.activity.GPSTracker"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <service
+            android:name="attender.oparkCard.apkservices.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="attender.oparkCard.subscription.activity.RenewCard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.subscription.activity.Subscriptionctivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.subscription.activity.CardDetail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.subscription.activity.ShowCardDetail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.TransationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.subscription.activity.ReprintReceipt"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.shiftreport.PDFShow"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.vehiclelist.activity.LossReceipt"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.booking.ReceiptLoss"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.login.ResendOtp"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.booking.ThreeWheeler"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.vehiclelist.activity.ThreeWheelerList"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="attender.oparkCard.subscription.activity.RemoveCardActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name="attender.oparkCard.booking.PatientVehicleWheeler" />
+        <activity android:name="attender.oparkCard.vehiclelist.activity.PatientVehicleWheelerList" />
+        <activity android:name="attender.oparkCard.booking.ReprintActivity"></activity>
+    </application>
+
+</manifest>
